@@ -4,6 +4,12 @@
     font-size: 62.5%;
 
     --ff-main: "Inter", sans-serif;
+
+    --color-health: #7990F8;
+    --color-work: #46CF8B;
+    --color-mental: #BC5EAD;
+    --color-others: #908986;
+    --color-button: #393433;
 }
 
 * {
@@ -22,8 +28,9 @@ body {
     background-color: #FFFFFF;
     max-width: 70rem;
     margin: auto;
-    margin-top: 20rem;
+    margin-top: 12rem;
     border-radius: .5rem;
+    padding: 1.5rem 1.5rem 1.5rem 1.5rem;
     
     justify-items: center;
 }
@@ -33,17 +40,18 @@ body {
     align-items: center;
     width: 100%;
     gap: 1rem;
-    padding: 3.7rem 0 0 4rem;
+    padding: 4rem 0 0 4rem;
+    margin-bottom: 4rem;
 }
 
 .date p {
-  font-size: 3.6rem;
+  font-size: 5rem;
   font-weight: 500;
 }
 
 .date span {
     opacity: 30%;
-    font-size: 3.6rem;
+    font-size: 5rem;
     font-weight: 500;
 }
 
@@ -51,11 +59,53 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: .8rem;
+    margin-bottom: 5rem;
 }
 
 .card {
     display: flex;
     flex-direction: column;
+    width: 27.9rem;
+    height: 13.3rem;
+    border-radius: .9rem;
+    padding: 2.1rem;
+    position: relative;
+}
+
+.work {
+    background-color: #46cf8b1f;
+}
+
+.health {
+    background-color: #7990f827;
+}
+
+.mental {
+    background-color: #bc5eac25;
+}
+
+.others {
+    background-color: #90898623;
+}
+
+.card img {
+    width: 3rem;
+    height: 3rem;
+}
+
+.card p {
+    align-self: flex-start;
+    position: absolute;
+    bottom: 3rem;
+    left: 2.1rem;
+    font-weight: 700;
+    font-size: 2.1rem;
+}
+
+.card p span {
+    opacity: 60%;
+    font-weight: normal;
+    margin-left: .7rem;
 }
 
 .tasks {
@@ -66,6 +116,28 @@ body {
    display: flex;
 }
 
-table {
+.input-task {
+    width: 56.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
+.input-task input {
+    height: 4.7rem;
+    border: none;
+    align-self: baseline;
+}
+
+.input-task .add-button {
+    width: 7rem;
+    height: 4.7rem;
+}
+
+.input-task input:placeholder-shown {
+    font-size: 3.6rem;
+}
+
+.input-task input:focus {
+    outline: 0;
 }
