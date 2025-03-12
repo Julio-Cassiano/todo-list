@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
+/* Variaveis */
 :root {
     font-size: 62.5%;
 
@@ -22,6 +23,10 @@ body {
     height: 100vh;
     background-color: #E2E2E2;
     font-family: var(--ff-main);
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 .app {
@@ -31,7 +36,8 @@ body {
     margin-top: 12rem;
     border-radius: .5rem;
     padding: 1.5rem 1.5rem 1.5rem 1.5rem;
-    
+    box-shadow: 0 1rem 2rem -1rem rgba(0, 0, 0, 0.3);
+
     justify-items: center;
 }
 
@@ -59,7 +65,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: .8rem;
-    margin-bottom: 5rem;
+    margin-bottom: 1.5rem;
 }
 
 .card {
@@ -74,18 +80,26 @@ body {
 
 .work {
     background-color: #46cf8b1f;
+    transition: transform .4s;
 }
 
 .health {
     background-color: #7990f827;
+    transition: transform .4s;
 }
 
 .mental {
     background-color: #bc5eac25;
+    transition: transform .4s;
 }
 
 .others {
     background-color: #90898623;
+    transition: transform .4s;
+}
+
+.work:hover, .health:hover, .mental:hover, .others:hover {
+    transform: scale(1.1);
 }
 
 .card img {
@@ -116,28 +130,53 @@ body {
    display: flex;
 }
 
-.input-task {
-    width: 56.6rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.input-task input {
-    height: 4.7rem;
+.add-button {
     border: none;
-    align-self: baseline;
+    background: none;
+    background-color: #393433;
+    width: 22rem;
+    height: 4rem;
+    color: #ffff;
+    border-radius: .3rem;
+    margin-bottom: 1.8rem;
+    transition: transform .4s;
 }
 
-.input-task .add-button {
-    width: 7rem;
-    height: 4.7rem;
+.add-button:hover{
+    transform: scale(1.1);
 }
 
-.input-task input:placeholder-shown {
-    font-size: 3.6rem;
+/* TASKS */
+
+.modal-tasks p:hover {
+    text-decoration: line-through;
+    color: rgba(0, 0, 0, 0.322);
 }
 
-.input-task input:focus {
-    outline: 0;
+.modal-tasks input {
+    display: none;
+}
+
+.modal-tasks input+label::before {
+    content: '';
+    width: 2rem;
+    height: 2rem;
+    border-radius: .4rem;
+    background-color: white;
+    border: 1px solid gray;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: .8rem;
+    margin-bottom: .3rem;
+
+}
+
+.modal-tasks input:checked+label:before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-check'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E");
+
+    background-position: center;
+}
+
+.modal-tasks label {
+    font-size: 1.6rem;
 }

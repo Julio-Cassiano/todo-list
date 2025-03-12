@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To do list</title>
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/modal.css">
     <script src="../js/index.js"></script>
 </head>
 <body>
@@ -36,11 +37,7 @@
                 </div>
             </section>
 
-
-            <div class="input-task">
-                <input id="input-todo" type="text" placeholder="Digite uma nova tarefa...">
-                <button class="add-button">&plus;</button>
-            </div>
+            <button class="add-button">&plus;</button>
 
             <div class="tasks">
                 <table>
@@ -51,6 +48,59 @@
                         </td>
                     </tr>
                 </table>
+            </div>
+
+        </div>
+
+        <div class="modal-wrapper">
+            <div class="modal-items">
+                <button class="remove">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-x">
+                        <circle cx="12" cy="12" r="10" />
+                        <path d="m15 9-6 6" />
+                        <path d="m9 9 6 6" />
+                    </svg>
+                </button>
+
+                <div class="modal-card">
+                    <input type="text" placeholder="Digite uma nova tarefa...">
+
+                    <div class="input-buttons-wrapper">
+                        <button id="health">
+                            <img src="../assets/images/heart.svg" alt="">
+                            Health</button>
+                        <button id="work"> 
+                            <img src="../assets/images/work.svg" alt="">
+                            Work</button>
+                        <button id="mental">
+                            <img src="../assets/images/heart-hand.svg" alt="">
+                            Mental Health</button>
+                        <button id="others">
+                            <img src="../assets/images/path.svg">
+                            Others
+                        </button>
+                    </div>
+
+                </div>
+
+                <hr>
+
+                <div class="modal-tasks">
+                    <table>
+                        <tr>
+                            <td class="task">
+                                <!-- <input type="checkbox" name="finished" class="finished"> -->
+                                <p>Tarefa a fazer</p>
+                            </td>
+
+                            <td class="button">
+                                <button>&times;</button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                </div>
             </div>
         </div>
 
