@@ -6,7 +6,7 @@
     <title>To do list</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/modal.css">
-    <script src="../js/index.js"></script>
+    <script src="../js/index.js" defer type="module"></script>
 </head>
 <body>
         <div class="app">
@@ -41,12 +41,18 @@
 
             <div class="tasks">
                 <table>
-                    <tr>
-                        <td class="task">
-                            <input type="checkbox" name="finished" class="finished">
-                            <p>Tarefa a fazer</p>
-                        </td>
-                    </tr>
+                    <tbody>
+                        <tr>
+                            <td class="task">
+                                <input type="checkbox" name="finished" id="task1">
+                                <label for="task1">Tarefa a fazer</label>
+                            </td>
+
+                            <td class="td-button">
+                                <button>&times;</button>
+                            </td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
 
@@ -84,8 +90,6 @@
 
                 </div>
 
-                <hr>
-
                 <div class="modal-tasks">
                     <table>
                         <tr>
@@ -94,7 +98,7 @@
                                 <p>Tarefa a fazer</p>
                             </td>
 
-                            <td class="button">
+                            <td class=".td-button">
                                 <button>&times;</button>
                             </td>
                         </tr>
